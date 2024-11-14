@@ -38,8 +38,4 @@ function calculateTime(t1, t2, t3) {
 
 }
 
-calculateTime(1, 1, 1).then((totalTime) => {
-    console.log(`Total time taken: ${totalTime} milliseconds`);
-});
-
 module.exports = calculateTime;
