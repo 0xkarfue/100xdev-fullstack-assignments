@@ -30,7 +30,7 @@ router.post("/login", async (req, res) => {
 
 router.get("/todos", userMiddleware, async (req, res) => {
   // Implement logic for getting todos for a user
-  const user = await User.findOne({ user: req.user.username });
+  const user = await User.findOne({ username: req.user.username });
   if (!user) return res.send("user not found");
   let todos = await Todo.findOne();
   res.send(todos);
