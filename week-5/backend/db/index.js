@@ -23,3 +23,12 @@ const todoSchema = mongoose.Schema({
     type: Boolean,
   },
 });
+
+const User = mongoose.model("user", userSchema);
+const Todo = mongoose.model("todo", todoSchema);
+
+
+module.exports = {
+  User,
+  Todo,
+};
